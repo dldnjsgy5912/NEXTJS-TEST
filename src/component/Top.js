@@ -31,6 +31,13 @@ export default function Top() {
             >
               About
             </Nav.Link>
+            <Nav.Link
+              onClick={() => {
+                router.push('/admin');
+              }}
+            >
+              Admin
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
