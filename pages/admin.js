@@ -8,11 +8,11 @@ const Admin = () => {
   const [isLoding, setIsLoding] = useState(false);
 
   const checkLogin = async () => {
-    const data = await axios.get('api/isLogin');
+    const res = await axios.get('api/isLogin');
     console.log(data);
-    if (data.status === 200 && data.data.name) {
+    if (res.status === 200 && res.data.name) {
       //로그인
-      setUser(data.data.name);
+      setUser(res.data.name);
       setIsLoding(true);
     } else {
       //로그인 안됨
